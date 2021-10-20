@@ -36,7 +36,7 @@ const Header = () => {
         
         <Grid container spacing={2} className={classes.nav}>
          <Grid item sm={2} md={4} lg={2}>  <img src={logo} alt="Logo" className={classes.pic} /> </Grid> 
-         <Grid item sm={2} md={2} lg={1}>  <h3 > <a href="#abc" className={classes.links}>Home</a></h3>
+         <Grid item sm={2} md={2} lg={1}>  <h3 > <a href="#Home" className={classes.links}>Home</a></h3>
     </Grid> 
          <Grid item sm={3} md={2} lg={1}>  <h3 > <a href="#abc"className={classes.links} >About Me</a></h3>  </Grid> 
          <Grid item sm={3} md={2} lg={1}>  <h3 > <a href="#abc"className={classes.links} >Works</a></h3>     </Grid> 

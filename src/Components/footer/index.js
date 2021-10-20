@@ -22,9 +22,9 @@ picture:{
        pics:{
 background:"white",
 border:"none",
-borderRadius:"54.17%",
-width:" 1.3177159590043923vw",
-height:"3.1690140845070425vh",
+borderRadius:"50%",
+width:" 1.1vw",
+height:"3vh",
 alignItems:"center",
 padding:"3px",
        },

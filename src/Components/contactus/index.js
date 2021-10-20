@@ -16,20 +16,19 @@ const useStyles = makeStyles((theme) => ({
   button: {
     border: "1px solid #FFB22A",
     borderRadius: "5px",
-    margin:"2rem 0 0 0",
+    margin: "2rem 0 0 0",
     padding: ".6rem",
     width: "12vw",
     color: "black",
     background: "#FFB22A",
     fontSize: "25px",
   },
-  inputs:{
-padding:"2.5rem"
+  inputs: {
+    padding: "2.5rem",
   },
-  tests:{
-    padding:"2.5rem"
-
-      },
+  tests: {
+    padding: "2.5rem",
+  },
   cart: {
     width: "40.849194729136165vw",
     height: "92.25352112676056vh",
@@ -48,6 +47,13 @@ const ContactUs = () => {
       ...prev,
       [name]: value,
     }));
+  };
+  const handlePageOne = () => {
+    const checkErrors = validatePageOne();
+    setErrors(checkErrors);
+    if (Object.keys(checkErrors).length > 0) {
+      return;
+    }
   };
   const validatePageOne = () => {
     const errors = {};
@@ -92,12 +98,13 @@ const ContactUs = () => {
               marginLeft: "105px",
             }}
           />{" "}
-          <Typography style={{ alignItems: "center", color: "#34667E",fontSize:"18px" }}>
+          <Typography
+            style={{ alignItems: "center", color: "#34667E", fontSize: "18px" }}
+          >
             Got a project, an idea or a job? Please drop me a message.
           </Typography>
         </Grid>
         <Grid item sm={6} md={6} lg={6} className={classes.tests}>
-        
           <img src={cartoon} alt="Logo" className={classes.cart} />{" "}
         </Grid>
         <Grid item sm={6} md={6} lg={6}>
@@ -177,26 +184,36 @@ const ContactUs = () => {
             <Grid item sm={6} md={6} lg={6}>
               {" "}
             </Grid>
-            
-            <Grid item sm={2} md={2} lg={2}>
 
+            <Grid item sm={2} md={2} lg={2}>
               {" "}
             </Grid>
 
             <Grid item sm={3} md={3} lg={3}>
               {" "}
-              <button onClick={validatePageOne} className={classes.button}>Send message</button>{" "}
+              <button onClick={handlePageOne} className={classes.button}>
+                Send message
+              </button>{" "}
             </Grid>
-            <Grid item sm={1} md={1} lg={1} >            </Grid>
-
-
+            <Grid item sm={1} md={1} lg={1}>
+              {" "}
+            </Grid>
           </Grid>
         </Grid>
-        <Grid item sm={12} md={12} lg={12} className={classes}>    
-        <h1 style={{ alignItems: "center", color:"#E5E5E5",fontSize:"88px",fontWeight:"400", }}>BRANDS  WORKED  FOR  NOW  AND  PAST</h1> 
-        <h1 style={{ alignItems: "center", color:"#E5E5E5",fontSize:"88px",fontWeight:"400" }}>BRANDS  WORKED  FOR  NOW  AND  PAST</h1> <h1 style={{  color:"#E5E5E5",fontSize:"88px",fontWeight:"400" }}>BRANDS  WORKED  FOR  NOW  AND  PAST</h1>  </Grid>
-
-
+        <Grid item sm={12} md={12} lg={12} className={classes}>
+          <h1
+            style={{
+              color: "#E5E5E5",
+              fontSize: "60px",
+              fontWeight: "400",
+            }}
+          >
+            BRANDS WORKED FOR NOW AND PAST BRANDS WORKED FOR NOW AND PAST BRANDS
+            WORKED FOR NOW AND PAST BRANDS WORKED FOR NOW AND PAST BRANDS WORKED
+            FOR NOW AND PAST BRANDS WORKED FOR NOW AND PASTBRANDS WORKED FOR NOW
+            AND PAST
+          </h1>
+        </Grid>
       </Grid>
     </>
   );

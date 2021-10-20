@@ -1,6 +1,5 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import Grid from '@material-ui/core/Grid';
-import { NavLink } from 'react-router-dom'
 import logo from '../../images/logof.png'
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';

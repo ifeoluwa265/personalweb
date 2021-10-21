@@ -14,20 +14,21 @@ home:{
     background:"#081929",
     color:"white",
     alignItems:"center",
-    padding:"3rem"
+    padding:"1.5rem",
+textAlign:"center"
 },
 picture:{
     width:"7.9vw"
        },
-       pics:{
+pices:{
+borderRadius:"50%",
+alignContent:"center",
+alignItems:"center",
+margin:"0",
+padding:"7px",
 background:"white",
 border:"none",
-borderRadius:"50%",
-width:" 1.1vw",
-height:"3vh",
-alignItems:"center",
-padding:"3px",
-       },
+}
 }))
 const Footer = () => {
     const classes = useStyles();
@@ -35,33 +36,41 @@ const Footer = () => {
     return (
         <>
             <Grid container spacing={0}className={classes.home}>
-            <Grid item sm={12} md={12} lg={12}  style={{alignItem:"center",textAlign:"center"}}>    <h3>Hit me up</h3> </Grid>
-            <Grid item sm={4} md={3} lg={3}> 
+            <Grid item xs={12} sm={12} md={12} >    <h3>Hit me up</h3> </Grid>
+
+            <Grid container spacing={0}>
+            <Grid item  xs={4} sm={4}  md={3} > 
             <img src={logo} alt="Logo" className={classes.picture} /> 
             </Grid>
+            <Grid item  xs={2} sm={2}  md={2} /> 
 
-            <Grid item sm={1} md={1} lg={1} margin={0}> 
+            <Grid item  xs={4} sm={4}  md={3} > 
+
+            <div style={{display:"flex", alignItems:"center",justifyContent:"space-around"}}>
+            <div  className={classes.pices}> 
             <img src={instagram} alt="Logo" className={classes.pics} /> 
-            </Grid>
-            <Grid item sm={1} md={1} lg={1}> 
+            </div>
+            <div  className={classes.pices}> 
             <img src={facebook} alt="Logo" className={classes.pics} /> 
-            </Grid>
-            <Grid item sm={1} md={1} lg={1}> 
+            </div> 
+            <div  className={classes.pices}> 
             <img src={twitter} alt="Logo" className={classes.pics} /> 
-            </Grid>
-            <Grid item sm={1} md={1} lg={1}> 
+            </div>
+            <div  className={classes.pices}> 
             <img src={watsapp} alt="Logo" className={classes.pics} /> 
-            </Grid>
-            <Grid item sm={1} md={1} lg={1}> 
+            </div>
+            <div  className={classes.pices}> 
             <img src={mail} alt="Logo" className={classes.pics} /> 
-            </Grid>
-            <Grid item sm={1} md={1} lg={1}> 
+            </div>
+            <div  className={classes.pices}> 
             <img src={phone} alt="Logo" className={classes.pics} /> 
+            </div>
+          
+            </div>
             </Grid>
-            <Grid item sm={2} md={2} lg={2}> 
             </Grid>
-            <Grid item sm={1} md={1} lg={1}/> 
-            <Grid item sm={12} md={12} lg={12}  style={{alignItem:"center",textAlign:"center"}}>    <h4>&#xa9; 2021 Adeeko Feyisetan</h4> </Grid>
+
+            <Grid item sm={12} md={12} lg={12}>    <h3>&#xa9; 2021 Adeeko Feyisetan</h3> </Grid>
 
 
             </Grid>

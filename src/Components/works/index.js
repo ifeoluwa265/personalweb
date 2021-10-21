@@ -10,33 +10,27 @@ import { data } from "../cards"
 const useStyles = makeStyles((theme) => ({
   screen: {
     alignItems: "center",
-    padding: "3rem 5rem 4rem 3rem",
+    padding: "2.5rem",
     background:"#F9F9FC"
   },
+ 
 }));
 const Works = () => {
   const classes = useStyles();
 
   return (
     <>
-      <Grid container spacing={0} className={classes.screen}>
+      <Grid container spacing={0}  className={classes.screen}>
         <Grid item sm={12} md={12} lg={12} className={classes}>
-          <p style={{ fontSize: "2.4rem", margin: "0px" }}>My Works</p>
+          <p style={{ fontSize: "1.8rem" }} id="section3">My Works</p>
           <hr
             style={{
               border: "1px solid #FFB22A",
               width: "5%",
               marginLeft: "65px",
             }}
-          />
-          <Grid
-            item
-            sm={12}
-            md={12}
-            lg={12}
-            style={{ marginBottom:"3rem", alignItems: "center" }}
-          ></Grid>
-        </Grid>
+          /></Grid>
+      
         <Grid container spacing={1}>
             { data.map((item) => {
                 return (
@@ -44,17 +38,16 @@ const Works = () => {
                     <Card className="newcard">
                       <CardActionArea>
                         <CardMedia
-                        className='picturez'
                           component="img"
                           alt="thinklogo"
-                          height="200"
+                          height="350"
                           image={item.imagez}
                           style={{ background: "white" }}
                         />
                         <CardContent>
-                          <h6 style={{ color: "#43E673" }}>
+                          <h4 style={{ color: "#434EE6" }}>
                             {item.description}
-                          </h6>
+                          </h4>
                         </CardContent>
                       </CardActionArea>
                       <CardContent>
@@ -75,8 +68,8 @@ const Works = () => {
                   </Grid>
                 );
               })
-} 
-          </Grid>
+}         </Grid>
+
       </Grid>
     </>
   );
